@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 
 const Header = () => {
     return (
-        <div className="flex items-center justify-between w-full px-3 py-3 mx-auto max-w-8xl lg:px-4 border-b border-gray-700">
+        <header className="flex items-center justify-between w-full px-3 py-3 mx-auto max-w-8xl lg:px-4 border-b border-gray-700">
             <div className="flex items-center">
                 <Link href="/" className="flex items-center gap-2">
                     <Image src={favicon} alt="logo" width={42} height={42} />
@@ -20,7 +20,7 @@ const Header = () => {
             </div>
 
             <Navigation />
-        </div>
+        </header>
     );
 };
 
