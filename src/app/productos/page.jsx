@@ -1,3 +1,8 @@
+export const metadata = {
+    title: "Productos",
+    description: "Clone Produnt Hunt - Productos que te pueden interesar",
+};
+
 const productos = () => {
     return (
         <div>

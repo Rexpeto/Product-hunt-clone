@@ -4,6 +4,9 @@ import "@/app/globals.css";
 export const metadata = {
     title: "Product Hunt Clone",
     description: "Clone Produnt Hunt",
+    icons: {
+        icon: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({ children }) {

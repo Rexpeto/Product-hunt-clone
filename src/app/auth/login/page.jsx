@@ -1,3 +1,8 @@
+export const metadata = {
+    title: "Iniciar sesión",
+    description: "Clone Produnt Hunt",
+};
+
 const login = () => {
     return (
         <div>
