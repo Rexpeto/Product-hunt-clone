@@ -1,31 +1,45 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
+    const pathname = usePathname();
+
     return (
         <div className="flex items-center gap-4">
             <nav className="flex items-center gap-3 dark:text-white">
                 <Link
                     href="/"
-                    className="hover:text-blue-400 transition duration-150"
+                    className={`${
+                        pathname === "/" ? "text-blue-400" : ""
+                    } hover:text-blue-400 transition duration-150 `}
                 >
                     Inicio
                 </Link>
                 <Link
                     href="/populares"
-                    className="hover:text-blue-400 transition duration-150"
+                    className={`${
+                        pathname === "/populares" ? "text-blue-400" : ""
+                    } hover:text-blue-400 transition duration-150 `}
                 >
                     Populares
                 </Link>
                 <Link
                     href="/productos"
-                    className="hover:text-blue-400 transition duration-150"
+                    className={`${
+                        pathname === "/productos" ? "text-blue-400" : ""
+                    } hover:text-blue-400 transition duration-150 `}
                 >
                     Productos
                 </Link>
             </nav>
             <Link
                 href="/auth/login"
-                className="dark:text-gray-400 dark:hover:text-white p-2 border rounded-xl border-gray-600 hover:border-blue-400 transition duration-150"
+                className={`${
+                    pathname === "/auth/login"
+                        ? "text-white border-blue-400"
+                        : "dark:text-gray-400 dark:hover:text-white hover:border-blue-400"
+                }  p-2 border rounded-xl border-gray-600 transition duration-150`}
             >
                 Iniciar Sesión
             </Link>
