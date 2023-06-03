@@ -11,7 +11,9 @@ export default function RootLayout({ children }) {
         <html lang="es">
             <body className="bg-white dark:bg-gray-900">
                 <Header />
-                <main>{children}</main>
+                <main className="container mx-auto dark:text-white pt-4">
+                    {children}
+                </main>
             </body>
         </html>
     );
