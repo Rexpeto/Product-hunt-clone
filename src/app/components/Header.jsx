@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import favicon from "../favicon.svg";
-import SearchBar from "./SearchBar";
-import Navigation from "./Navigation";
+import favicon from "@/app/favicon.svg";
+import SearchBar from "@/app/components/SearchBar";
+import Navigation from "@/app/components/Navigation";
 
 const Header = () => {
     return (

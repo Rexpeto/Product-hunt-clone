@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import "./globals.css";
+import Header from "@/app/components/Header";
+import "@/app/globals.css";
 
 export const metadata = {
     title: "Product Hunt Clone",
