@@ -11,6 +11,12 @@ const Navigation = () => {
                     Inicio
                 </Link>
                 <Link
+                    href="/populares"
+                    className="hover:text-blue-400 transition duration-150"
+                >
+                    Populares
+                </Link>
+                <Link
                     href="/productos"
                     className="hover:text-blue-400 transition duration-150"
                 >
