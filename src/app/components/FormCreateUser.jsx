@@ -4,14 +4,12 @@ import useValidation from "@/app/hooks/useValidation";
 import validationCreateUser from "@/app/validation/validationCreateUser";
 
 const FormCreateUser = () => {
-    const INITIAL_VALIDATION = {};
-
     const createAccount = () => {
         console.log("Creando cuenta");
     };
 
     const { value, error, submitForm, handleChange, handleSubmit } =
-        useValidation(INITIAL_VALIDATION, validationCreateUser, createAccount);
+        useValidation(validationCreateUser, createAccount);
 
     return (
         <form className="space-y-6" onSubmit={handleSubmit}>
