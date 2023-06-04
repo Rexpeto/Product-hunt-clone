@@ -1,0 +1,44 @@
+"use client";
+import { useEffect, useState } from "react";
+
+const useValidation = (stateInitial, validation, fn) => {
+    const [value, setValue] = useState(stateInitial);
+    const [submitForm, setSubmitForm] = useState(false);
+    const [error, setError] = useState({});
+
+    useEffect(() => {
+        if (submitForm) {
+            const notError = Object.keys(error).length === 0;
+
+            if (notError) {
+                fn();
+            }
+
+            setSubmitForm(false);
+        }
+    }, [error]);
+
+    const handleChange = (e) => {
+        setValue({
+            ...value,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const errorValitadtion = validation(value);
+        setError(errorValitadtion);
+        setSubmitForm(true);
+    };
+
+    return {
+        value,
+        error,
+        submitForm,
+        handleChange,
+        handleSubmit,
+    };
+};
+
+export default useValidation;
