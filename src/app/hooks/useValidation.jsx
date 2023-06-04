@@ -1,8 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const useValidation = (stateInitial, validation, fn) => {
-    const [value, setValue] = useState(stateInitial);
+const useValidation = (validation, fn) => {
+    const [value, setValue] = useState({});
     const [submitForm, setSubmitForm] = useState(false);
     const [error, setError] = useState({});
 
@@ -12,6 +12,8 @@ const useValidation = (stateInitial, validation, fn) => {
 
             if (notError) {
                 fn();
+                setSubmitForm(true);
+                return;
             }
 
             setSubmitForm(false);
