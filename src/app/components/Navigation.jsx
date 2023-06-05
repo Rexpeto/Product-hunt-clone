@@ -37,9 +37,9 @@ const Navigation = () => {
                 href="/auth/login"
                 className={`${
                     pathname === "/auth/login"
-                        ? "text-white border-blue-400"
-                        : "dark:text-gray-400 dark:hover:text-white hover:border-blue-400"
-                }  p-2 border rounded-xl border-gray-600 transition duration-150`}
+                        ? "text-white border-blue-400 hover:border-blue-400"
+                        : "border-gray-600  dark:text-gray-400 dark:hover:text-white hover:border-blue-400"
+                }  p-2 border rounded-xl transition duration-150`}
             >
                 Iniciar Sesión
             </Link>
