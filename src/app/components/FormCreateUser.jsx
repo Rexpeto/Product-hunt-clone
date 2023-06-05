@@ -2,7 +2,6 @@
 import Link from "next/link";
 import useValidation from "@/app/hooks/useValidation";
 import validationCreateUser from "@/app/validation/validationCreateUser";
-import { toast } from "react-toastify";
 
 const FormCreateUser = () => {
     const createAccount = () => {
@@ -18,9 +17,7 @@ const FormCreateUser = () => {
                 Registrarse
             </h5>
             {Object.keys(error).length !== 0 ? (
-                <div
-                    className="flex p-3 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-900 dark:text-red-400"
-                >
+                <div className="flex p-3 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-900 dark:text-red-400">
                     <svg
                         aria-hidden="true"
                         className="flex-shrink-0 inline w-5 h-5 mr-3"
